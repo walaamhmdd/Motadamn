@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -40,6 +42,36 @@ class _DonorState extends State<Donor> {
                 ),
               ),
             ),
+              Transform.translate(
+                offset: Offset(70,99),
+                child: Container(
+
+                  width: 70,
+                  height: 70,
+                  decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          spreadRadius: 2,
+                            color: Color(0x37038add),
+                            offset: Offset(5, 5),
+                            blurRadius: 5
+      ),
+
+                      ],
+                  border:Border.all(width:3, color: Colors.white),
+                    borderRadius: BorderRadius.circular(85),
+                    color: Colors.white
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(85),
+                    child: Image.asset(
+                      'images/donor.png',
+
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+              ),
               _buildTopHeader(),
               _buildProfileRow(),
 
@@ -47,34 +79,72 @@ class _DonorState extends State<Donor> {
             ]
           ),
           Padding(
-            padding: const EdgeInsets.only(top:8.0, left: 150),
-            child: Text('الحالات التى تم التبرع لها',
-            textAlign: TextAlign.right,
-            style: TextStyle(
-              fontFamily: 'Farsi',
-              fontWeight: FontWeight.w100,
-              color:Color(0xff0064BF),
+            padding: const EdgeInsets.only(top:6.0, left: 140),
+            child: Container(
+              height: 35,
+              width: 180,
+              decoration: BoxDecoration(
+    color: Color(0xffF7DC0C),
+    borderRadius: BorderRadius.circular(50),
+    boxShadow: [
+    BoxShadow(
+    color: Color(0xff86B9F7),
+    blurRadius: 10.0,
+    offset: Offset(4.0, 4.0),
+    ),
+    ],
+    ),
+              child: Transform.translate(
+                offset: Offset(-10,-2),
+                child: Text('الحالات التى تم التبرع لها',
+                textAlign: TextAlign.right,
+                style: TextStyle(
+                  fontFamily: 'Simple',
+                  fontWeight: FontWeight.w600,
+                  color:Colors.white,
 
-                fontSize: 20
-            ),),
+                    fontSize: 19
+                ),),
+              ),
+            ),
           ),
           Row(children: <Widget>[
-            _buildCard('images/case2.jpeg', 'أحمد', 'يحتاج الى 2000 جنيها شهريا ليعيش حياه كريمه', 'الأورمان', ' جنيها2000 '),
+            _buildCard('images/case2.jpeg', 'أحمد', 'يحتاج الى 2000 جنيها شهريا ليعيش حياه كريمه', 'الأورمان', '2000  جنيها'),
             _buildCard('images/case3.jpeg', 'سعيد', 'يحتاج الى 5000 جنيها شهريا ليعيش حياه كريمه', 'رسالة', '5000 جنيها')
           ],),
+          SizedBox(height: 10,),
           Padding(
             padding: const EdgeInsets.only(left: 150.0),
-            child: Text('البرامج التى تم التبرع لها',
-              textAlign: TextAlign.right,
-              style: TextStyle(
-                  fontFamily: 'Farsi',
-                  fontSize: 20,
-               fontWeight: FontWeight.w100,
-                  color: Color(0xff0064BF),
+            child: Container(
+    height: 37,
+    width: 170,
+    decoration: BoxDecoration(
+    color: Color(0xffF7DC0C),
+    borderRadius: BorderRadius.circular(50),
+    boxShadow: [
+    BoxShadow(
+    color: Color(0xff86B9F7),
+    blurRadius: 10.0,
+    offset: Offset(4.0, 4.0),
+    ),
+    ],
 
-              ),),
+    ),
+              child: Transform.translate(
+                offset: Offset(-10,-1),
+                child: Text('البرامج التى تم التبرع لها',
+                  textAlign: TextAlign.right,
+                  style: TextStyle(
+                      fontFamily: 'Simple',
+                      fontSize: 16.5,
+                   fontWeight: FontWeight.w600,
+                      color: Colors.white,
+
+                  ),),
+              ),
+            ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: 20,),
           Padding(
             padding: const EdgeInsets.only(left: 40.0),
             child: Row(//mainAxisAlignment: MainAxisAlignment.spaceEvenly ,
@@ -90,10 +160,7 @@ class _DonorState extends State<Donor> {
 
                     blurRadius: 5.0, // soften the shadow
                     spreadRadius: 0.0, //extend the shadow
-                    //offset: Offset(
-                    //15.0, // Move to right 10  horizontally
-                    // 15.0, // Move to bottom 10 Vertically
-                    //),
+
                   )
                 ],
               ),
@@ -103,7 +170,7 @@ class _DonorState extends State<Donor> {
                   style: TextStyle(
                     fontSize: 20,
                     color: Color(0xff7FD858),
-                    fontFamily: 'Farsi',
+                    fontFamily: 'Simple',
                   ),),
               ),
             ),
@@ -132,7 +199,7 @@ class _DonorState extends State<Donor> {
                   style: TextStyle(
                     fontSize: 20,
                     color: Color(0xff7FD858),
-                    fontFamily: 'Farsi',
+                    fontFamily: 'Simple',
                   ),),
               ),
 
@@ -151,7 +218,7 @@ class _DonorState extends State<Donor> {
                 Text('15000 جنيها',
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                    fontFamily: 'Farsi',
+                    fontFamily: 'Simple',
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
                     color: Colors.yellow[600],
@@ -161,7 +228,7 @@ class _DonorState extends State<Donor> {
                 Text('مجموع التبرعات',
                   textAlign: TextAlign.right,
                   style: TextStyle(
-                      fontFamily: 'Farsi',
+                      fontFamily: 'Simple',
                       fontSize: 20,
                     fontWeight: FontWeight.w200,
                     //  fontWeight: FontWeight.w900,
@@ -209,7 +276,7 @@ class _DonorState extends State<Donor> {
                   title: Text(
                     'المزيد',
                     style: TextStyle(
-                        fontFamily: 'Century1',
+                        fontFamily: 'Century',
                         fontSize: 13,
                         fontWeight: FontWeight.w900),
                   ),
@@ -219,7 +286,7 @@ class _DonorState extends State<Donor> {
                   title: Text(
                     'الملف الشخصى',
                     style: TextStyle(
-                        fontFamily: 'Century1',
+                        fontFamily: 'Century',
                         fontSize: 13,
                         fontWeight: FontWeight.w900),
                   ),
@@ -237,7 +304,7 @@ class _DonorState extends State<Donor> {
                   title: Text(
                     'تبرع الان',
                     style: TextStyle(
-                        fontFamily: 'Century1',
+                        fontFamily: 'Century',
                         fontSize: 13,
                         fontWeight: FontWeight.w900),
                     textAlign: TextAlign.end,
@@ -248,7 +315,7 @@ class _DonorState extends State<Donor> {
                   title: Text(
                     'الحالات',
                     style: TextStyle(
-                        fontFamily: 'Century1',
+                        fontFamily: 'Century',
                         fontSize: 13,
                         fontWeight: FontWeight.w900),
                   ),
@@ -258,7 +325,7 @@ class _DonorState extends State<Donor> {
                   title: Text(
                     'الصفحة الرئيسية',
                     style: TextStyle(
-                        fontFamily: 'Century1',
+                        fontFamily: 'Century',
                         fontSize: 11,
                         fontWeight: FontWeight.w900),
                   ),
@@ -280,7 +347,7 @@ class ClippingClass extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     Path path = Path();
-    Offset curveStartingPoint = Offset(0, 0);
+    Offset  curveStartingPoint = Offset(0, 0);
     Offset curveEndPoint = Offset(size.width, size.height * 0.95);
     path.quadraticBezierTo(size.width * 0.4, size.height * 1.0,
         curveEndPoint.dx, curveEndPoint.dy);
@@ -304,7 +371,12 @@ Widget _buildTopHeader() {
   icon: Icon(Icons.arrow_back_ios),
   color: Color(0xFF0064BF),
   iconSize: 25,
-  onPressed: () {},
+  onPressed: () {
+
+  //  Navigator.push(context, MaterialPageRoute(
+     // builder: (context) => All(),
+   // ));
+  },
   ),
   Padding(
   padding: const EdgeInsets.only(left: 100),
@@ -313,7 +385,7 @@ Widget _buildTopHeader() {
   textAlign: TextAlign.center,
   style: TextStyle(
   fontSize: 25.0,
-  fontFamily: "Farsi",
+  fontFamily: "Simple",
   color: Color(0xFF0064BF),
   fontWeight: FontWeight.w700,
   ),
@@ -346,7 +418,7 @@ Widget _buildProfileRow() {
                     fontSize: 30.0,
                     color: Color(0xff0064BF),
                    // fontWeight: FontWeight.bold,
-                fontFamily: 'Farsi',
+                fontFamily: 'Simple',
                 ),
               ),
               Transform.translate(
@@ -360,17 +432,14 @@ Widget _buildProfileRow() {
                     style: new TextStyle(
                       fontFamily: 'Century1',
                         fontSize: 14.0,
-                        color: Colors.blue[400],
+                        color: Color(0xff86B9F7),
                         fontWeight: FontWeight.w400),
                   ),
                 ),
               ),
             ],
-          ),),new CircleAvatar(
-          minRadius: 50.0,
-          maxRadius: 50.0,
-          backgroundImage: new AssetImage('images/donor.jpeg'),
-        ),
+          ),),
+
 
       ],
     ),
@@ -378,111 +447,120 @@ Widget _buildProfileRow() {
 }
 Widget _buildCard(String image , String name, String status, String charity,String amount) {
   return Padding(
-    padding: const EdgeInsets.only(left:8.0, right: 8.0),
-      child: Container(
-        height: 180,
-        width: 160,
-        child: Card(
-            shadowColor: const Color(0xff86B9F7),
+    padding: const EdgeInsets.only(left:10.0, right: 10, top: 10,bottom: 10),
+    child:
+       Container(
+         height: 180,
+          width: 160,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                color: Color(0xff86B9F7),
+                blurRadius: 10.0,
+                offset: Offset(4.0, 4.0),
+              ),
+            ],
+          ),
 
-          shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0)
+          child: Column(
 
-            ),
-            elevation: 30.0,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
 
-            child: SingleChildScrollView(
-              child: Column(
-
-              //mainAxisAlignment: MainAxisAlignment.spaceAround,//mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-              SizedBox(height: 3),
-                Container(
-                  height: 55.0,
-                  width: 55.0,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-
-                      color: const Color(0xff86B9F7),
-                      image: DecorationImage(
-                        image: AssetImage(image),
-                        fit: BoxFit.cover,
-                      )),
-                ),
-                Transform.translate(
-                  offset:  Offset(0,-18),
-                  child: Text(
-                    name,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontFamily: 'Farsi',
-                      //   fontWeight: FontWeight.bold,
-                     fontSize: 30.0,
-                      color: Colors.yellow[600],
-                    ),
-                  ),
-                ),
-
-                Transform.translate(
-                  offset: Offset(0,-40),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left:10.0, right: 20.0),
-                    child: Text(
-                      status,
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                        fontFamily: 'Century1',
-                        fontWeight: FontWeight.w600,
-                        fontSize: 10.0,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                ),
-                Transform.translate(
-                  offset: Offset(-50,-50),
-                  child: Text(
-
-                    charity,
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontFamily: 'Farsi',
-                      //fontWeight: FontWeight.bold,
-                    //  fontSize: 15.0,
-                      color: const Color(0xff0064BF),
-                    ),
-                  ),
-                ),
-
-
-              Transform.translate(
-                offset: Offset(0,-60),
-                child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                Stack(
                   children: <Widget>[
 
-                    Text(amount,
+                    Transform.translate(
+                      offset: Offset(56,-50),
+                      child: Container(
+                        height: 55.0,
+                        width: 55.0,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50.0),
+
+                            color: const Color(0xff86B9F7),
+                            image: DecorationImage(
+                              image: AssetImage(image),
+                              fit: BoxFit.cover,
+                            )),
+                      ),
+                    ),
+                  Transform.translate(
+                    offset:  Offset(64,-8),
+                    child: Text(
+                      name,
+
+                      style: TextStyle(
+                        fontFamily: 'Simple',
+                        //   fontWeight: FontWeight.bold,
+                       fontSize: 30.0,
+                        color: Colors.yellow[600],
+                      ),
+                    ),
+                  ),
+
+                  Transform.translate(
+                    offset: Offset(0,40),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left:10.0, right: 20.0),
+                      child: Text(
+                        status,
+                        textAlign: TextAlign.right,
+                        style: TextStyle(
+                          fontFamily: 'Century',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 10.0,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Transform.translate(
+                    offset: Offset(10,60),
+                    child: Text(
+
+                      charity,
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                          fontFamily: 'Farsi',
-                          color: Color(0xff7FD858),
+                        fontFamily: 'Simple',
+                        //fontWeight: FontWeight.bold,
+                      //  fontSize: 15.0,
+                        color: const Color(0xff0064BF),
                       ),
                     ),
-                    Text('المبلغ',
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                          fontFamily: 'Farsi',
-                          color: Colors.blue
+                  ),
+
+
+                Transform.translate(
+                  offset: Offset(0,85),
+                  child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+
+                      Text(amount,
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            fontFamily: 'Simple',
+                            color: Color(0xff7FD858),
+                        ),
                       ),
-                    ),
-                  ],
+                      Text('المبلغ',
+                        textAlign: TextAlign.right,
+                        style: TextStyle(
+                            fontFamily: 'Simple',
+                            color: Colors.blue
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+      ],
                 ),
-              )
               ],
-            ),
-            ),
-           // margin: cardIndex.isEven? EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0):EdgeInsets.fromLTRB(10.0, 20.0,10.0, 0.0)
-        ),
-      ),
-    );
+          ),
+    ),
+          );
 }
 

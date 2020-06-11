@@ -60,13 +60,13 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-  - family: Farsi
+  - family: Simple
     fonts:
-    - asset: fonts/Farsi.ttf
+    - asset: fonts/Simple.ttf
 
-  - family: Century1
+  - family: Century
     fonts:
-    - asset: fonts/Century1.ttf
+    - asset: fonts/CenturyGothic.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

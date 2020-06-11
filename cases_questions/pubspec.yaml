@@ -1,5 +1,6 @@
-name: donor
+name: casesscreen
 description: A new Flutter application.
+
 
 publish_to:
 
@@ -22,8 +23,7 @@ flutter:
 
   uses-material-design: true
 
-  assets:
-  - images/
+
 
   fonts:
     - family: Simple

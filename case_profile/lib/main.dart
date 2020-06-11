@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
                 color: Colors.blue,
                 fontWeight: FontWeight.w700,
                 fontSize: 30,
-                fontFamily: 'Farsi',
+                fontFamily: 'Simple',
               ),
             ),
           ),
@@ -83,7 +83,7 @@ class _HomeState extends State<Home> {
                 "70%",
                 style: TextStyle(
                     color: Colors.blue[500],
-                    fontFamily: 'Farsi',
+                    fontFamily: 'Simple',
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
@@ -160,7 +160,7 @@ class _HomeState extends State<Home> {
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white,
-                    fontFamily: 'Farsi',
+                    fontFamily: 'Simple',
                   ),
                 ),
               ),
@@ -195,7 +195,7 @@ class _HomeState extends State<Home> {
                   title: Text(
                     'المزيد',
                     style: TextStyle(
-                        fontFamily: 'Century1',
+                        fontFamily: 'Century',
                         fontSize: 13,
                         fontWeight: FontWeight.w900),
                   ),
@@ -205,7 +205,7 @@ class _HomeState extends State<Home> {
                   title: Text(
                     'الملف الشخصى',
                     style: TextStyle(
-                        fontFamily: 'Century1',
+                        fontFamily: 'Century',
                         fontSize: 13,
                         fontWeight: FontWeight.w900),
                   ),
@@ -223,7 +223,7 @@ class _HomeState extends State<Home> {
                   title: Text(
                     'تبرع الان',
                     style: TextStyle(
-                        fontFamily: 'Century1',
+                        fontFamily: 'Century',
                         fontSize: 13,
                         fontWeight: FontWeight.w900),
                     textAlign: TextAlign.end,
@@ -234,7 +234,7 @@ class _HomeState extends State<Home> {
                   title: Text(
                     'الحالات',
                     style: TextStyle(
-                        fontFamily: 'Century1',
+                        fontFamily: 'Century',
                         fontSize: 13,
                         fontWeight: FontWeight.w900),
                   ),
@@ -244,7 +244,7 @@ class _HomeState extends State<Home> {
                   title: Text(
                     'الصفحة الرئيسية',
                     style: TextStyle(
-                        fontFamily: 'Century1',
+                        fontFamily: 'Century',
                         fontSize: 11,
                         fontWeight: FontWeight.w900),
                   ),
@@ -282,7 +282,7 @@ Widget _buildRow(String description, String name) {
                 description,
                 //textAlign: TextAlign.right,
                 style: TextStyle(
-                  fontFamily: 'Farsi',
+                  fontFamily: 'Simple',
                   fontWeight: FontWeight.bold,
                   fontSize: 18.0,
                   color: Colors.blue[300],
@@ -299,7 +299,7 @@ Widget _buildRow(String description, String name) {
           name,
           //textAlign: TextAlign.right,
           style: TextStyle(
-            fontFamily: 'Farsi',
+            fontFamily: 'Simple',
             fontWeight: FontWeight.bold,
             fontSize: 21.0,
             color: Colors.black,
